@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Administrador</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Free HTML Templates" name="keywords">
+  <meta content="Free HTML Templates" name="description">
+
+  <!-- Favicon -->
+  <link href="img/Green.png - copia.png" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="estilo_admin.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <center>
+      <img src="img/Proyecto nuevo (1).png" alt="Logo"  id="test">
+      <h2 class="h1 text-uppercase">INICIAR SESIÓN</h2>
+      <hr>
+    </center>
+
+    <form name="form" method="post" onsubmit="validar(); return false;">
+      <div class="form-group">
+        <label class="h4 text-white" for="login">USUARIO:</label>
+        <input type="text" name="login" id="login" class="form-control" size="25" required>
+      </div>
+
+      <div class="form-group">
+        <label class="h4 text-white" for="password">CONTRASEÑA:</label>
+        <input type="password" name="password" id="password" class="form-control" size="25" required>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="h1 btn btn-primary">ACCEDER</button>
+        <a href="index.php" class="h1 btn btn-primary">VOLVER</a>
+      </div>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    function validar() {
+      var login = document.form.login.value.toUpperCase();
+      var password = document.form.password.value.toUpperCase();
+
+      if ((password === 'AGRO.COM' && login === 'JESUS') ||
+          (password === 'AGRO.COM' && login === 'YULI') ||
+          (password === 'AGRO.COM' && login === 'XIMENA') ||
+          (password === 'AGRO.COM' && login === 'CRISTIAN')) {
+        window.location = "welcome.php";
+      } else {
+        alert("El nombre de usuario o la contraseña es incorrecta. Ingresa los datos correctamente y en letras mayúsculas.");
+        window.location = "admin.html";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
